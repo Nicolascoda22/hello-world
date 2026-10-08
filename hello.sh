@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
-read -p "Comment tu t'appelles ? " prenom
-echo "Hello $prenom"
+if [ $# -gt 2 ]; then
+	echo  "Hello everyone"
+elif [ $# == 0 ]; then
+	echo "Donnez des prénoms"
+else
+	echo "Hello $@"
+fi
